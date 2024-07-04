@@ -11,7 +11,8 @@ import ComposableArchitecture
 import XCTestDynamicOverlay
 
 struct RepoSearchClient {
-  var search: @Sendable (String) async throws -> RepositoryModel
+    /// @Sendable : 동시(concurrently)에 사용해도 안전한 타입
+    var search: @Sendable (String) async throws -> RepositoryModel
 }
 
 extension DependencyValues {

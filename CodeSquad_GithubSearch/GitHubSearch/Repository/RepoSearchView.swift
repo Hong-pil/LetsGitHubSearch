@@ -9,8 +9,10 @@ import SwiftUI
 import ComposableArchitecture
 
 struct RepoSearchView: View {
+    
+    /// 뷰가 스토어를 가지고 있는 구조임 (StoreOf를 통해 RepoSearch 리듀서를 Store 타입으로 변환해줌)
     @State var store: StoreOf<RepoSearch>
-   
+    
     var body: some View {
         NavigationView {
             Group {
