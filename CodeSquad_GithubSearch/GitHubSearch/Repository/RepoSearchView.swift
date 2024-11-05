@@ -21,7 +21,11 @@ struct RepoSearchView: View {
                 } else {
                     List {
                         ForEach(store.searchResults, id: \.self) { repo in
-                            Text(repo)
+                            NavigationLink {
+                                Text(repo)
+                            } label: {
+                                Text(repo)
+                            }
                         }
                     }
                 }
